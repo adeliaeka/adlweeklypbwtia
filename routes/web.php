@@ -14,15 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        "title" => "Home",
+    ]);
 });
 
 Route::get('/profile', function () {
-    return view('profile');
+    return view('profile', [
+        "title" => "Profile",
+        "name" => "Adelia eka rahmawati",
+        "nim" => "13242520036",
+        "prodi" => "Teknologi Informasi",
+        "gambar" => "adel.jpeg",
+    ]);
 });
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact', [
+        "title" => "contact",
+    ]);
 });
 Route::get('/berita', function () {
-    return view('berita');
+    return view('berita', [
+        "title" => "Berita",
+    ]);
 });
