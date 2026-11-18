@@ -1,6 +1,8 @@
+
 <?php
 
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -27,3 +29,5 @@ Route::get('/contact', function () {
         "title" => "Contact",
     ]);
 });
+
+Route::get('/datamahasiswa', [MahasiswaController::class, 'index']);
